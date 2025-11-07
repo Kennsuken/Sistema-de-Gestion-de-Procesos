@@ -1,0 +1,112 @@
+📄 ESPECIFICACIÓN DE REQUISITOS
+SISTEMA DE GESTIÓN DE PROCESOS
+1. INTRODUCCIÓN
+1.1 Propósito
+Sistema que simula la gestión de procesos de un sistema operativo utilizando estructuras de datos dinámicas lineales.
+
+1.2 Alcance
+Aplicación de consola que permite gestionar procesos, planificar ejecución en CPU y administrar memoria.
+
+2. REQUISITOS FUNCIONALES
+2.1 Gestión de Procesos (RF-001)
+Descripción: Sistema debe permitir CRUD completo de procesos
+Prioridad: ALTA
+Criterios Aceptación:
+
+Crear proceso con nombre, prioridad, memoria, tiempo
+
+Eliminar proceso por ID
+
+Buscar proceso por ID y nombre
+
+Modificar prioridad de proceso
+
+Listar todos los procesos
+
+2.2 Planificación de CPU (RF-002)
+Descripción: Ejecutar procesos por prioridad usando cola
+Prioridad: ALTA
+Criterios Aceptación:
+
+Cargar procesos a cola de ejecución
+
+Ejecutar procesos ordenados por prioridad
+
+Mostrar estado de cola de CPU
+
+Simular tiempo de ejecución
+
+2.3 Gestión de Memoria (RF-003)
+Descripción: Administrar memoria usando pila LIFO
+Prioridad: MEDIA
+Criterios Aceptación:
+
+Asignar memoria a procesos
+
+Liberar memoria (LIFO)
+
+Liberar memoria de proceso específico
+
+Mostrar estado de memoria
+
+2.4 Persistencia de Datos (RF-004)
+Descripción: Guardar y cargar estado del sistema
+Prioridad: MEDIA
+Criterios Aceptación:
+
+Guardar procesos en archivo
+
+Cargar procesos desde archivo
+
+Formato: CSV con campos de proceso
+
+2.5 Interfaz de Usuario (RF-005)
+Descripción: Menú interactivo con validación
+Prioridad: ALTA
+Criterios Aceptación:
+
+Menú principal con 7 opciones
+
+Validación de entradas numéricas
+
+Mensajes de error claros
+
+Navegación intuitiva
+
+3. REQUISITOS NO FUNCIONALES
+3.1 Compatibilidad (RNF-001)
+Compilador: Dev-C++ 5.11
+
+Estándar: C++ ISO (sin C++11)
+
+Sistema: Windows 7/10/11
+
+3.2 Rendimiento (RNF-002)
+Tiempo respuesta: < 1 segundo por operación
+
+Memoria: Uso eficiente de estructuras dinámicas
+
+Estabilidad: Sin leaks de memoria
+
+3.3 Usabilidad (RNF-003)
+Curva aprendizaje: < 5 minutos
+
+Mensajes de error descriptivos
+
+Validación proactiva de entradas
+
+3.4 Mantenibilidad (RNF-004)
+Código documentado y comentado
+
+Estructura modular
+
+Facil extensión
+
+4. RESTRICCIONES TÉCNICAS
+No usar STL avanzada
+
+Implementar estructuras desde cero
+
+Sin caracteres especiales (ñ, acentos)
+
+Gestión manual de memoria
